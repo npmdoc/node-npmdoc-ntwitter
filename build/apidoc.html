@@ -1,0 +1,3837 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/AvianFlu/ntwitter"
+
+    >ntwitter (v0.5.0)</a>
+</h1>
+<h4>Asynchronous Twitter REST/stream/search client API for node.js.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ntwitter">module ntwitter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.ntwitter">
+            function <span class="apidocSignatureSpan"></span>ntwitter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index">
+            function <span class="apidocSignatureSpan">ntwitter.</span>index
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.parser">
+            function <span class="apidocSignatureSpan">ntwitter.</span>parser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ntwitter.</span>index.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ntwitter.</span>parser.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ntwitter.</span>utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">ntwitter.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ntwitter.index">module ntwitter.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.index">
+            function <span class="apidocSignatureSpan">ntwitter.</span>index
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">ntwitter.index.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ntwitter.index.prototype">module ntwitter.index.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype._getUsingCursor">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>_getUsingCursor
+            <span class="apidocSignatureSpan">(url, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.blockExists">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>blockExists
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.blockUser">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>blockUser
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.cookie">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>cookie
+            <span class="apidocSignatureSpan">(req)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.createBlock">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>createBlock
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.createFavorite">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>createFavorite
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.createFriendship">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>createFriendship
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.createList">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>createList
+            <span class="apidocSignatureSpan">(screen_name, list_name, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.createSavedSearch">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>createSavedSearch
+            <span class="apidocSignatureSpan">(query, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.deleteDirectMessage">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>deleteDirectMessage
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.deleteFavorite">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>deleteFavorite
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.deleteFriendship">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>deleteFriendship
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.deleteList">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>deleteList
+            <span class="apidocSignatureSpan">(screen_name, list_id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.deleteSavedSearch">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>deleteSavedSearch
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.deleteStatus">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>deleteStatus
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.destroyBlock">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroyBlock
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.destroyDirectMessage">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroyDirectMessage
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.destroyFavorite">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroyFavorite
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.destroyFriendship">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroyFriendship
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.destroyList">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroyList
+            <span class="apidocSignatureSpan">(screen_name, list_id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.destroySavedSearch">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroySavedSearch
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.destroyStatus">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroyStatus
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.favoriteStatus">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>favoriteStatus
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.gatekeeper">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>gatekeeper
+            <span class="apidocSignatureSpan">(failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.geoGetPlace">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>geoGetPlace
+            <span class="apidocSignatureSpan">(place_id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.geoReverseGeocode">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>geoReverseGeocode
+            <span class="apidocSignatureSpan">(lat, lng, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.geoSearch">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>geoSearch
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.geoSimilarPlaces">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>geoSimilarPlaces
+            <span class="apidocSignatureSpan">(lat, lng, name, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.get">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>get
+            <span class="apidocSignatureSpan">(url, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getCurrentTrends">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getCurrentTrends
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getDailyTrends">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getDailyTrends
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getDirectMessages">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getDirectMessages
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getDirectMessagesSent">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getDirectMessagesSent
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getFavorites">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getFavorites
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getFollowersIds">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getFollowersIds
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getFriendsIds">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getFriendsIds
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getFriendsTimeline">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getFriendsTimeline
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getHomeTimeline">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getHomeTimeline
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getListMembers">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getListMembers
+            <span class="apidocSignatureSpan">(screen_name, list_id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getListMemberships">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getListMemberships
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getListSubscribers">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getListSubscribers
+            <span class="apidocSignatureSpan">(screen_name, list_id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getListSubscriptions">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getListSubscriptions
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getListTimeline">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getListTimeline
+            <span class="apidocSignatureSpan">(screen_name, list_id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getLists">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getLists
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getMentions">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getMentions
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getPublicTimeline">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getPublicTimeline
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getRelatedResults">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRelatedResults
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getRetweetedBy">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetedBy
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getRetweetedByIds">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetedByIds
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getRetweetedByMe">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetedByMe
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getRetweetedByUser">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetedByUser
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getRetweetedToMe">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetedToMe
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getRetweetedToUser">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetedToUser
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getRetweets">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweets
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getRetweetsOfMe">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetsOfMe
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getSentDirectMessages">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getSentDirectMessages
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getStatus">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getStatus
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getTrends">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getTrends
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getTrendsWithId">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getTrendsWithId
+            <span class="apidocSignatureSpan">(woeid, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getUserTimeline">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getUserTimeline
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.getWeeklyTrends">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getWeeklyTrends
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.incomingFriendship">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>incomingFriendship
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.incomingFriendships">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>incomingFriendships
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.isBlocked">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>isBlocked
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.login">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>login
+            <span class="apidocSignatureSpan">(mount, success)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.lookupFriendship">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>lookupFriendship
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.lookupUser">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>lookupUser
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.lookupUsers">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>lookupUsers
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.newDirectMessage">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>newDirectMessage
+            <span class="apidocSignatureSpan">(id, text, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.newSavedSearch">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>newSavedSearch
+            <span class="apidocSignatureSpan">(query, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.outgoingFriendship">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>outgoingFriendship
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.outgoingFriendships">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>outgoingFriendships
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.post">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>post
+            <span class="apidocSignatureSpan">(url, content, content_type, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.rateLimitStatus">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>rateLimitStatus
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.reportSpam">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>reportSpam
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.retweetStatus">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>retweetStatus
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.savedSearches">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>savedSearches
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.search">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>search
+            <span class="apidocSignatureSpan">(q, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.searchUser">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>searchUser
+            <span class="apidocSignatureSpan">(q, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.searchUsers">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>searchUsers
+            <span class="apidocSignatureSpan">(q, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.sendDirectMessage">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>sendDirectMessage
+            <span class="apidocSignatureSpan">(id, text, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.showFriendship">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>showFriendship
+            <span class="apidocSignatureSpan">(source, target, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.showList">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>showList
+            <span class="apidocSignatureSpan">(screen_name, list_id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.showListStatuses">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>showListStatuses
+            <span class="apidocSignatureSpan">(screen_name, list_id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.showSavedSearch">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>showSavedSearch
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.showStatus">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>showStatus
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.showUser">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>showUser
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.stream">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>stream
+            <span class="apidocSignatureSpan">(method, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.unblockUser">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>unblockUser
+            <span class="apidocSignatureSpan">(id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.updateDirectMessage">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>updateDirectMessage
+            <span class="apidocSignatureSpan">(id, text, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.updateList">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>updateList
+            <span class="apidocSignatureSpan">(screen_name, list_id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.updateProfile">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>updateProfile
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.updateProfileImg">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>updateProfileImg
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.updateStatus">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>updateStatus
+            <span class="apidocSignatureSpan">(text, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.userProfileImage">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>userProfileImage
+            <span class="apidocSignatureSpan">(id, params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.index.prototype.verifyCredentials">
+            function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>verifyCredentials
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ntwitter.parser">module ntwitter.parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.parser.parser">
+            function <span class="apidocSignatureSpan">ntwitter.</span>parser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">ntwitter.parser.</span>END_LENGTH</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">ntwitter.parser.</span>END</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ntwitter.parser.prototype">module ntwitter.parser.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.parser.prototype.checkHeartbeat">
+            function <span class="apidocSignatureSpan">ntwitter.parser.prototype.</span>checkHeartbeat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.parser.prototype.receive">
+            function <span class="apidocSignatureSpan">ntwitter.parser.prototype.</span>receive
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ntwitter.utils">module ntwitter.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ntwitter.utils.merge">
+            function <span class="apidocSignatureSpan">ntwitter.utils.</span>merge
+            <span class="apidocSignatureSpan">(defaults)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ntwitter" id="apidoc.module.ntwitter">module ntwitter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.ntwitter" id="apidoc.element.ntwitter.ntwitter">
+        function <span class="apidocSignatureSpan"></span>ntwitter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Twitter(options) {
+  if (!(this instanceof Twitter)) return new Twitter(options);
+
+  var defaults = {
+    consumer_key: null,
+    consumer_secret: null,
+    access_token_key: null,
+    access_token_secret: null,
+
+    headers: {
+      &#x27;Accept&#x27;: &#x27;*/*&#x27;,
+      &#x27;Connection&#x27;: &#x27;close&#x27;,
+      &#x27;User-Agent&#x27;: &#x27;ntwitter/&#x27; + VERSION
+    },
+
+
+    secure: false, // force use of https for login/gatekeeper
+    cookie: &#x27;twauth&#x27;,
+    cookie_options: {},
+    cookie_secret: null
+  };
+  this.options = utils.merge(defaults, options, keys.urls);
+
+  this.oauth = new oauth.OAuth(
+    this.options.request_token_url,
+    this.options.access_token_url,
+    this.options.consumer_key,
+    this.options.consumer_secret,
+    &#x27;1.0&#x27;, null, &#x27;HMAC-SHA1&#x27;, null,
+    this.options.headers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index" id="apidoc.element.ntwitter.index">
+        function <span class="apidocSignatureSpan">ntwitter.</span>index
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Twitter(options) {
+  if (!(this instanceof Twitter)) return new Twitter(options);
+
+  var defaults = {
+    consumer_key: null,
+    consumer_secret: null,
+    access_token_key: null,
+    access_token_secret: null,
+
+    headers: {
+      &#x27;Accept&#x27;: &#x27;*/*&#x27;,
+      &#x27;Connection&#x27;: &#x27;close&#x27;,
+      &#x27;User-Agent&#x27;: &#x27;ntwitter/&#x27; + VERSION
+    },
+
+
+    secure: false, // force use of https for login/gatekeeper
+    cookie: &#x27;twauth&#x27;,
+    cookie_options: {},
+    cookie_secret: null
+  };
+  this.options = utils.merge(defaults, options, keys.urls);
+
+  this.oauth = new oauth.OAuth(
+    this.options.request_token_url,
+    this.options.access_token_url,
+    this.options.consumer_key,
+    this.options.consumer_secret,
+    &#x27;1.0&#x27;, null, &#x27;HMAC-SHA1&#x27;, null,
+    this.options.headers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.parser" id="apidoc.element.ntwitter.parser">
+        function <span class="apidocSignatureSpan">ntwitter.</span>parser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parser() {
+  // Make sure we call our parents constructor
+  EventEmitter.call(this);
+  this.buffer = &#x27;&#x27;;
+  this.lastTime = null;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ntwitter.index" id="apidoc.module.ntwitter.index">module ntwitter.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.index" id="apidoc.element.ntwitter.index.index">
+        function <span class="apidocSignatureSpan">ntwitter.</span>index
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Twitter(options) {
+  if (!(this instanceof Twitter)) return new Twitter(options);
+
+  var defaults = {
+    consumer_key: null,
+    consumer_secret: null,
+    access_token_key: null,
+    access_token_secret: null,
+
+    headers: {
+      &#x27;Accept&#x27;: &#x27;*/*&#x27;,
+      &#x27;Connection&#x27;: &#x27;close&#x27;,
+      &#x27;User-Agent&#x27;: &#x27;ntwitter/&#x27; + VERSION
+    },
+
+
+    secure: false, // force use of https for login/gatekeeper
+    cookie: &#x27;twauth&#x27;,
+    cookie_options: {},
+    cookie_secret: null
+  };
+  this.options = utils.merge(defaults, options, keys.urls);
+
+  this.oauth = new oauth.OAuth(
+    this.options.request_token_url,
+    this.options.access_token_url,
+    this.options.consumer_key,
+    this.options.consumer_secret,
+    &#x27;1.0&#x27;, null, &#x27;HMAC-SHA1&#x27;, null,
+    this.options.headers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ntwitter.index.prototype" id="apidoc.module.ntwitter.index.prototype">module ntwitter.index.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype._getUsingCursor" id="apidoc.element.ntwitter.index.prototype._getUsingCursor">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>_getUsingCursor
+        <span class="apidocSignatureSpan">(url, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getUsingCursor = function (url, params, callback) {
+  var self = this,
+    params = params || {},
+    key = params.key || null,
+    result = [];
+
+  // if we don&#x27;t have a key to fetch, we&#x27;re screwed
+  if (!key)
+    callback(new Error(&#x27;FAIL: Results key must be provided to _getUsingCursor().&#x27;));
+  delete params.key;
+
+  // kick off the first request, using cursor -1
+  params = utils.merge(params, {cursor:-1});
+  this.get(url, params, fetch);
+
+  function fetch(err, data) {
+    if (err) {
+      return callback(err);
+    }
+
+    // FIXME: what if data[key] is not a list?
+    if (data[key]) result = result.concat(data[key]);
+
+    if (data.next_cursor_str === &#x27;0&#x27;) {
+      callback(null, result);
+    } else {
+      params.cursor = data.next_cursor_str;
+      self.get(url, params, fetch);
+    }
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.blockExists" id="apidoc.element.ntwitter.index.prototype.blockExists">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>blockExists
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">blockExists = function (id, callback) {
+  var url = &#x27;/blocks/exists.json&#x27;;
+
+  var params = {};
+  if (typeof id === &#x27;string&#x27;)
+    params.screen_name = id;
+  else
+    params.user_id = id;
+
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.blockUser" id="apidoc.element.ntwitter.index.prototype.blockUser">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>blockUser
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">blockUser = function (id, callback) {
+  var url = &#x27;/blocks/create.json&#x27;;
+
+  var params = {};
+  if (typeof id === &#x27;string&#x27;)
+    params.screen_name = id;
+  else
+    params.user_id = id;
+
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.cookie" id="apidoc.element.ntwitter.index.prototype.cookie">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>cookie
+        <span class="apidocSignatureSpan">(req)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cookie = function (req) {
+  var keys = null;
+
+	//this make no sense !this.options.cookie_secret return always true or false
+  //if ( !this.options.cookie_secret !== null )
+	if(this.options.cookie_secret)
+    keys = new Keygrip(this.options.cookie_secret);
+  var cookies = new Cookies( req, null, keys )
+  var getState = this.options.getState || function (req, key) {
+    return cookies.get(key);
+  };
+
+  // Fetch the cookie
+  try {
+    var twauth = JSON.parse(getState(req, this.options.cookie));
+  } catch (error) {
+    var twauth = null;
+  }
+  return twauth;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.createBlock" id="apidoc.element.ntwitter.index.prototype.createBlock">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>createBlock
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createBlock = function (id, callback) {
+  var url = &#x27;/blocks/create.json&#x27;;
+
+  var params = {};
+  if (typeof id === &#x27;string&#x27;)
+    params.screen_name = id;
+  else
+    params.user_id = id;
+
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.createFavorite" id="apidoc.element.ntwitter.index.prototype.createFavorite">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>createFavorite
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createFavorite = function (id, params, callback) {
+  var url = &#x27;/favorites/create/&#x27; + escape(id) + &#x27;.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.createFriendship" id="apidoc.element.ntwitter.index.prototype.createFriendship">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>createFriendship
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createFriendship = function (id, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var defaults = {
+    include_entities: 1
+  };
+  if (typeof id === &#x27;string&#x27;)
+    defaults.screen_name = id;
+  else
+    defaults.user_id = id;
+  params = utils.merge(defaults, params);
+
+  var url = &#x27;/friendships/create.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.createList" id="apidoc.element.ntwitter.index.prototype.createList">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>createList
+        <span class="apidocSignatureSpan">(screen_name, list_name, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createList = function (screen_name, list_name, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var url = &#x27;/&#x27; + escape(screen_name) + &#x27;/lists.json&#x27;;
+  params = utils.merge(params, {name:list_name});
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.createSavedSearch" id="apidoc.element.ntwitter.index.prototype.createSavedSearch">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>createSavedSearch
+        <span class="apidocSignatureSpan">(query, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createSavedSearch = function (query, callback) {
+  var url = &#x27;/saved_searches/create.json&#x27;;
+  this.post(url, {query: query}, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.deleteDirectMessage" id="apidoc.element.ntwitter.index.prototype.deleteDirectMessage">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>deleteDirectMessage
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteDirectMessage = function (id, callback) {
+  var url = &#x27;/direct_messages/destroy/&#x27; + escape(id) + &#x27;.json?_method=DELETE&#x27;;
+  this.post(url, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.deleteFavorite" id="apidoc.element.ntwitter.index.prototype.deleteFavorite">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>deleteFavorite
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteFavorite = function (id, params, callback) {
+  var url = &#x27;/favorites/destroy/&#x27; + escape(id) + &#x27;.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.deleteFriendship" id="apidoc.element.ntwitter.index.prototype.deleteFriendship">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>deleteFriendship
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteFriendship = function (id, callback) {
+  if (typeof id === &#x27;function&#x27;) {
+    callback = id;
+    id = null;
+  }
+
+  var params = {
+    include_entities: 1
+  };
+  if (typeof id === &#x27;string&#x27;)
+    params.screen_name = id;
+  else
+    params.user_id = id;
+
+  var url = &#x27;/friendships/destroy.json?_method=DELETE&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.deleteList" id="apidoc.element.ntwitter.index.prototype.deleteList">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>deleteList
+        <span class="apidocSignatureSpan">(screen_name, list_id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteList = function (screen_name, list_id, callback) {
+  var url = &#x27;/&#x27; + escape(screen_name) + &#x27;/lists/&#x27; + escape(list_id) + &#x27;.json?_method=DELETE&#x27;;
+  this.post(url, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.deleteSavedSearch" id="apidoc.element.ntwitter.index.prototype.deleteSavedSearch">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>deleteSavedSearch
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteSavedSearch = function (id, callback) {
+  var url = &#x27;/saved_searches/destroy/&#x27; + escape(id) + &#x27;.json?_method=DELETE&#x27;;
+  this.post(url, null, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.deleteStatus" id="apidoc.element.ntwitter.index.prototype.deleteStatus">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>deleteStatus
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteStatus = function (id, callback) {
+  var url = &#x27;/statuses/destroy/&#x27; + escape(id) + &#x27;.json&#x27;;
+  this.post(url, null, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.destroyBlock" id="apidoc.element.ntwitter.index.prototype.destroyBlock">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroyBlock
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroyBlock = function (id, callback) {
+  var url = &#x27;/blocks/destroy.json&#x27;;
+
+  var params = {};
+  if (typeof id === &#x27;string&#x27;)
+    params.screen_name = id;
+  else
+    params.user_id = id;
+
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.destroyDirectMessage" id="apidoc.element.ntwitter.index.prototype.destroyDirectMessage">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroyDirectMessage
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroyDirectMessage = function (id, callback) {
+  var url = &#x27;/direct_messages/destroy/&#x27; + escape(id) + &#x27;.json?_method=DELETE&#x27;;
+  this.post(url, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.destroyFavorite" id="apidoc.element.ntwitter.index.prototype.destroyFavorite">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroyFavorite
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroyFavorite = function (id, params, callback) {
+  var url = &#x27;/favorites/destroy/&#x27; + escape(id) + &#x27;.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.destroyFriendship" id="apidoc.element.ntwitter.index.prototype.destroyFriendship">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroyFriendship
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroyFriendship = function (id, callback) {
+  if (typeof id === &#x27;function&#x27;) {
+    callback = id;
+    id = null;
+  }
+
+  var params = {
+    include_entities: 1
+  };
+  if (typeof id === &#x27;string&#x27;)
+    params.screen_name = id;
+  else
+    params.user_id = id;
+
+  var url = &#x27;/friendships/destroy.json?_method=DELETE&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.destroyList" id="apidoc.element.ntwitter.index.prototype.destroyList">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroyList
+        <span class="apidocSignatureSpan">(screen_name, list_id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroyList = function (screen_name, list_id, callback) {
+  var url = &#x27;/&#x27; + escape(screen_name) + &#x27;/lists/&#x27; + escape(list_id) + &#x27;.json?_method=DELETE&#x27;;
+  this.post(url, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.destroySavedSearch" id="apidoc.element.ntwitter.index.prototype.destroySavedSearch">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroySavedSearch
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroySavedSearch = function (id, callback) {
+  var url = &#x27;/saved_searches/destroy/&#x27; + escape(id) + &#x27;.json?_method=DELETE&#x27;;
+  this.post(url, null, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.destroyStatus" id="apidoc.element.ntwitter.index.prototype.destroyStatus">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>destroyStatus
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroyStatus = function (id, callback) {
+  var url = &#x27;/statuses/destroy/&#x27; + escape(id) + &#x27;.json&#x27;;
+  this.post(url, null, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.favoriteStatus" id="apidoc.element.ntwitter.index.prototype.favoriteStatus">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>favoriteStatus
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">favoriteStatus = function (id, params, callback) {
+  var url = &#x27;/favorites/create/&#x27; + escape(id) + &#x27;.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.gatekeeper" id="apidoc.element.ntwitter.index.prototype.gatekeeper">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>gatekeeper
+        <span class="apidocSignatureSpan">(failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gatekeeper = function (failure) {
+  var self = this,
+    mount = this.options.login_mount || &#x27;/twauth&#x27;;
+
+  return function(req, res, next) {
+    var twauth = self.cookie(req);
+
+    // We have a winner
+    if ( twauth &#x26;&#x26; twauth.user_id &#x26;&#x26; twauth.access_token_secret )
+      return next();
+
+    // I pity the fool!
+    // FIXME: use &#x27;failure&#x27; param to fail with: a) 401, b) redirect
+    //        possibly using configured login mount point
+    //        perhaps login can save the mount point, then we can use it?
+    res.writeHead(401, {}); // {} for bug in stack
+    res.end([
+      &#x27;&#x3c;html&#x3e;&#x3c;head&#x3e;&#x27;,
+      &#x27;&#x3c;meta http-equiv=&#x22;refresh&#x22; content=&#x22;1;url=&#x22; + mount + &#x22;&#x22;&#x3e;&#x27;,
+      &#x27;&#x3c;/head&#x3e;&#x3c;body&#x3e;&#x27;,
+      &#x27;&#x3c;h1&#x3e;Twitter authentication required.&#x3c;/h1&#x3e;&#x27;,
+      &#x27;&#x3c;/body&#x3e;&#x3c;/html&#x3e;&#x27;
+    ].join(&#x27;&#x27;));
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.geoGetPlace" id="apidoc.element.ntwitter.index.prototype.geoGetPlace">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>geoGetPlace
+        <span class="apidocSignatureSpan">(place_id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">geoGetPlace = function (place_id, callback) {
+  var url = &#x27;/geo/id/&#x27; + escape(place_id) + &#x27;.json&#x27;;
+  this.get(url, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.geoReverseGeocode" id="apidoc.element.ntwitter.index.prototype.geoReverseGeocode">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>geoReverseGeocode
+        <span class="apidocSignatureSpan">(lat, lng, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">geoReverseGeocode = function (lat, lng, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = {};
+  } else if (typeof params !== &#x27;object&#x27;) {
+    params = {};
+  }
+
+  if (typeof lat !== &#x27;number&#x27; || typeof lng !== &#x27;number&#x27;) {
+    callback(new Error(&#x27;FAIL: You must specify latitude and longitude as numbers.&#x27;));
+  }
+
+  var url = &#x27;/geo/reverse_geocode.json&#x27;;
+  params.lat = lat;
+  params.long = lng;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.geoSearch" id="apidoc.element.ntwitter.index.prototype.geoSearch">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>geoSearch
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">geoSearch = function (params, callback) {
+  var url = &#x27;/geo/search.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.geoSimilarPlaces" id="apidoc.element.ntwitter.index.prototype.geoSimilarPlaces">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>geoSimilarPlaces
+        <span class="apidocSignatureSpan">(lat, lng, name, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">geoSimilarPlaces = function (lat, lng, name, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = {};
+  } else if (typeof params !== &#x27;object&#x27;) {
+    params = {};
+  }
+
+  if (typeof lat !== &#x27;number&#x27; || typeof lng !== &#x27;number&#x27; || !name) {
+    callback(new Error(&#x27;FAIL: You must specify latitude, longitude (as numbers) and name.&#x27;));
+  }
+
+  var url = &#x27;/geo/similar_places.json&#x27;;
+  params.lat = lat;
+  params.long = lng;
+  params.name = name;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.get" id="apidoc.element.ntwitter.index.prototype.get">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>get
+        <span class="apidocSignatureSpan">(url, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (url, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  if ( typeof callback !== &#x27;function&#x27; ) {
+    throw new Error(&#x27;FAIL: INVALID CALLBACK.&#x27;);
+    return this;
+  }
+
+  if (url.charAt(0) == &#x27;/&#x27;)
+    url = this.options.rest_base + url;
+
+  this.oauth.get(url + &#x27;?&#x27; + querystring.stringify(params),
+    this.options.access_token_key,
+    this.options.access_token_secret,
+  function(error, data, response) {
+    if ( error &#x26;&#x26; error.statusCode ) {
+      var err = new Error(&#x27;HTTP Error &#x27;
+        + error.statusCode + &#x27;: &#x27;
+        + http.STATUS_CODES[error.statusCode]);
+      err.statusCode = error.statusCode;
+      err.data = error.data;
+      callback(err);
+    }
+    else if (error) {
+      callback(error);
+    }
+    else {
+      try {
+        var json = JSON.parse(data);
+      }
+      catch(err) {
+        return callback(err);
+      }
+      callback(null, json);
+    }
+  });
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getCurrentTrends" id="apidoc.element.ntwitter.index.prototype.getCurrentTrends">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getCurrentTrends
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCurrentTrends = function (params, callback) {
+  this.getTrendsWithId(&#x27;1&#x27;, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getDailyTrends" id="apidoc.element.ntwitter.index.prototype.getDailyTrends">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getDailyTrends
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDailyTrends = function (params, callback) {
+  var url = &#x27;/trends/daily.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getDirectMessages" id="apidoc.element.ntwitter.index.prototype.getDirectMessages">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getDirectMessages
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDirectMessages = function (params, callback) {
+  var url = &#x27;/direct_messages.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getDirectMessagesSent" id="apidoc.element.ntwitter.index.prototype.getDirectMessagesSent">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getDirectMessagesSent
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDirectMessagesSent = function (params, callback) {
+  var url = &#x27;/direct_messages/sent.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getFavorites" id="apidoc.element.ntwitter.index.prototype.getFavorites">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getFavorites
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFavorites = function (params, callback) {
+  var url = &#x27;/favorites.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getFollowersIds" id="apidoc.element.ntwitter.index.prototype.getFollowersIds">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getFollowersIds
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFollowersIds = function (id, callback) {
+  if (typeof id === &#x27;function&#x27;) {
+    callback = id;
+    id = null;
+  }
+
+  var params = { key: &#x27;ids&#x27; };
+  if (typeof id === &#x27;string&#x27;)
+    params.screen_name = id;
+  else if (typeof id === &#x27;number&#x27;)
+    params.user_id = id;
+
+  var url = &#x27;/followers/ids.json&#x27;;
+  this._getUsingCursor(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getFriendsIds" id="apidoc.element.ntwitter.index.prototype.getFriendsIds">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getFriendsIds
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFriendsIds = function (id, callback) {
+  if (typeof id === &#x27;function&#x27;) {
+    callback = id;
+    id = null;
+  }
+
+  var params = { key: &#x27;ids&#x27; };
+  if (typeof id === &#x27;string&#x27;)
+    params.screen_name = id;
+  else if (typeof id === &#x27;number&#x27;)
+    params.user_id = id;
+
+  var url = &#x27;/friends/ids.json&#x27;;
+  this._getUsingCursor(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getFriendsTimeline" id="apidoc.element.ntwitter.index.prototype.getFriendsTimeline">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getFriendsTimeline
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFriendsTimeline = function (params, callback) {
+  var url = &#x27;/statuses/friends_timeline.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getHomeTimeline" id="apidoc.element.ntwitter.index.prototype.getHomeTimeline">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getHomeTimeline
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHomeTimeline = function (params, callback) {
+  var url = &#x27;/statuses/home_timeline.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getListMembers" id="apidoc.element.ntwitter.index.prototype.getListMembers">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getListMembers
+        <span class="apidocSignatureSpan">(screen_name, list_id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getListMembers = function (screen_name, list_id, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var url = &#x27;/&#x27; + escape(screen_name) + &#x27;/&#x27; + escape(list_id) + &#x27;/members.json&#x27;;
+  params = utils.merge(params, {key:&#x27;users&#x27;});
+  this._getUsingCursor(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getListMemberships" id="apidoc.element.ntwitter.index.prototype.getListMemberships">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getListMemberships
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getListMemberships = function (id, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var defaults = {key:&#x27;lists&#x27;};
+  if (typeof id === &#x27;string&#x27;)
+    defaults.screen_name = id;
+  else
+    defaults.user_id = id;
+  params = utils.merge(defaults, params);
+
+  var url = &#x27;/lists/memberships.json&#x27;;
+  this._getUsingCursor(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getListSubscribers" id="apidoc.element.ntwitter.index.prototype.getListSubscribers">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getListSubscribers
+        <span class="apidocSignatureSpan">(screen_name, list_id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getListSubscribers = function (screen_name, list_id, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var url = &#x27;/&#x27; + escape(screen_name) + &#x27;/&#x27; + escape(list_id) + &#x27;/subscribers.json&#x27;;
+  params = utils.merge(params, {key:&#x27;users&#x27;});
+  this._getUsingCursor(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getListSubscriptions" id="apidoc.element.ntwitter.index.prototype.getListSubscriptions">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getListSubscriptions
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getListSubscriptions = function (id, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var defaults = {key:&#x27;lists&#x27;};
+  if (typeof id === &#x27;string&#x27;)
+    defaults.screen_name = id;
+  else
+    defaults.user_id = id;
+  params = utils.merge(defaults, params);
+
+  var url = &#x27;/lists/subscriptions.json&#x27;;
+  this._getUsingCursor(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getListTimeline" id="apidoc.element.ntwitter.index.prototype.getListTimeline">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getListTimeline
+        <span class="apidocSignatureSpan">(screen_name, list_id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getListTimeline = function (screen_name, list_id, params, callback) {
+  var url = &#x27;/&#x27; + escape(screen_name) + &#x27;/lists/&#x27; + escape(list_id) + &#x27;/statuses.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getLists" id="apidoc.element.ntwitter.index.prototype.getLists">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getLists
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLists = function (id, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var defaults = {key:&#x27;lists&#x27;};
+  if (typeof id === &#x27;string&#x27;)
+    defaults.screen_name = id;
+  else
+    defaults.user_id = id;
+  params = utils.merge(defaults, params);
+
+  var url = &#x27;/lists.json&#x27;;
+  this._getUsingCursor(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getMentions" id="apidoc.element.ntwitter.index.prototype.getMentions">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getMentions
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getMentions = function (params, callback) {
+  var url = &#x27;/statuses/mentions.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getPublicTimeline" id="apidoc.element.ntwitter.index.prototype.getPublicTimeline">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getPublicTimeline
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPublicTimeline = function (params, callback) {
+  var url = &#x27;/statuses/public_timeline.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getRelatedResults" id="apidoc.element.ntwitter.index.prototype.getRelatedResults">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRelatedResults
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRelatedResults = function (id, params, callback) {
+	var url = &#x27;/related_results/show/&#x27; + escape(id) + &#x27;.json&#x27;;
+	this.get(url, params, callback);
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getRetweetedBy" id="apidoc.element.ntwitter.index.prototype.getRetweetedBy">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetedBy
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRetweetedBy = function (id, params, callback) {
+  var url = &#x27;/statuses/&#x27; + escape(id) + &#x27;/retweeted_by.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getRetweetedByIds" id="apidoc.element.ntwitter.index.prototype.getRetweetedByIds">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetedByIds
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRetweetedByIds = function (id, params, callback) {
+  var url = &#x27;/statuses/&#x27; + escape(id) + &#x27;/retweeted_by/ids.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getRetweetedByMe" id="apidoc.element.ntwitter.index.prototype.getRetweetedByMe">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetedByMe
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRetweetedByMe = function (params, callback) {
+  var url = &#x27;/statuses/retweeted_by_me.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getRetweetedByUser" id="apidoc.element.ntwitter.index.prototype.getRetweetedByUser">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetedByUser
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRetweetedByUser = function (params, callback){
+  var url = &#x27;/statuses/retweeted_by_user.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getRetweetedToMe" id="apidoc.element.ntwitter.index.prototype.getRetweetedToMe">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetedToMe
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRetweetedToMe = function (params, callback) {
+  var url = &#x27;/statuses/retweeted_to_me.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getRetweetedToUser" id="apidoc.element.ntwitter.index.prototype.getRetweetedToUser">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetedToUser
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRetweetedToUser = function (params, callback){
+  var url = &#x27;/statuses/retweeted_to_user.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getRetweets" id="apidoc.element.ntwitter.index.prototype.getRetweets">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweets
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRetweets = function (id, params, callback) {
+  var url = &#x27;/statuses/retweets/&#x27; + escape(id) + &#x27;.json&#x27;;
+  this.get(url, params,  callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getRetweetsOfMe" id="apidoc.element.ntwitter.index.prototype.getRetweetsOfMe">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getRetweetsOfMe
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRetweetsOfMe = function (params, callback) {
+  var url = &#x27;/statuses/retweets_of_me.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getSentDirectMessages" id="apidoc.element.ntwitter.index.prototype.getSentDirectMessages">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getSentDirectMessages
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSentDirectMessages = function (params, callback) {
+  var url = &#x27;/direct_messages/sent.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getStatus" id="apidoc.element.ntwitter.index.prototype.getStatus">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getStatus
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getStatus = function (id, callback) {
+  var url = &#x27;/statuses/show/&#x27; + escape(id) + &#x27;.json&#x27;;
+  this.get(url, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getTrends" id="apidoc.element.ntwitter.index.prototype.getTrends">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getTrends
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTrends = function (callback) {
+  this.getTrendsWithId(&#x27;1&#x27;, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getTrendsWithId" id="apidoc.element.ntwitter.index.prototype.getTrendsWithId">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getTrendsWithId
+        <span class="apidocSignatureSpan">(woeid, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTrendsWithId = function (woeid, params, callback) {
+  if (!woeid) woeid = &#x27;1&#x27;;
+  var url = &#x27;/trends/&#x27; + woeid + &#x27;.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getUserTimeline" id="apidoc.element.ntwitter.index.prototype.getUserTimeline">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getUserTimeline
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUserTimeline = function (params, callback) {
+  var url = &#x27;/statuses/user_timeline.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.getWeeklyTrends" id="apidoc.element.ntwitter.index.prototype.getWeeklyTrends">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>getWeeklyTrends
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getWeeklyTrends = function (params, callback) {
+  var url = &#x27;/trends/weekly.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.incomingFriendship" id="apidoc.element.ntwitter.index.prototype.incomingFriendship">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>incomingFriendship
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">incomingFriendship = function (callback) {
+  var url = &#x27;/friendships/incoming.json&#x27;;
+  this._getUsingCursor(url, {key:&#x27;ids&#x27;}, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.incomingFriendships" id="apidoc.element.ntwitter.index.prototype.incomingFriendships">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>incomingFriendships
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">incomingFriendships = function (callback) {
+  var url = &#x27;/friendships/incoming.json&#x27;;
+  this._getUsingCursor(url, {key:&#x27;ids&#x27;}, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.isBlocked" id="apidoc.element.ntwitter.index.prototype.isBlocked">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>isBlocked
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBlocked = function (id, callback) {
+  var url = &#x27;/blocks/exists.json&#x27;;
+
+  var params = {};
+  if (typeof id === &#x27;string&#x27;)
+    params.screen_name = id;
+  else
+    params.user_id = id;
+
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.login" id="apidoc.element.ntwitter.index.prototype.login">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>login
+        <span class="apidocSignatureSpan">(mount, success)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">login = function (mount, success) {
+  var self = this,
+    url = require(&#x27;url&#x27;);
+
+  // Save the mount point for use in gatekeeper
+  this.options.login_mount = mount = mount || &#x27;/twauth&#x27;;
+
+  // Use secure cookie if forced to https and haven&#x27;t configured otherwise
+  if ( this.options.secure &#x26;&#x26; !this.options.cookie_options.secure )
+    this.options.cookie_options.secure = true;
+  // Set up the cookie encryption secret if we&#x27;ve been given one
+  var keys = null;
+	//the same issue than above
+  //if ( !this.options.cookie_secret !== null )
+	if(this.options.cookie_secret)
+    keys = new Keygrip(this.options.cookie_secret);
+  // FIXME: ^ so configs that don&#x27;t use login() won&#x27;t work?
+
+  return function handle(req, res, next) {
+    // state
+    var cookies = new Cookies( req, res, keys )
+    var setState = self.options.setState || function (res, key, value) {
+      cookies.set(key, value, self.options.cookie_options);
+    };
+    var clearState = self.options.clearState || function (res, key) {
+      cookies.set(key);
+    };
+
+    var path = url.parse(req.url, true);
+
+    // We only care about requests against the exact mount point
+    if ( path.pathname !== mount ) return next();
+
+    // Set the oauth_callback based on this request if we don&#x27;t have it
+    if ( !self.oauth._authorize_callback ) {
+      // have to get the entire url because this is an external callback
+      // but it&#x27;s only done once...
+      var scheme = (req.socket.secure || self.options.secure) ? &#x27;https://&#x27; : &#x27;http://&#x27;,
+        path = url.parse(scheme + req.headers.host + req.url, true);
+      self.oauth._authorize_callback = path.href;
+    }
+
+    // Fetch the cookie
+    var twauth = self.cookie(req);
+
+    // We have a winner, but they&#x27;re in the wrong place
+    if ( twauth &#x26;&#x26; twauth.user_id &#x26;&#x26; twauth.access_token_secret ) {
+      res.writeHead(302, {&#x27;Location&#x27;: success || &#x27;/&#x27;});
+      res.end();
+      return;
+
+    // Returning from Twitter with oauth_token
+    } else if ( path.query &#x26;&#x26; path.query.oauth_token &#x26;&#x26; path.query.oauth_verifier &#x26;&#x26; twauth &#x26;&#x26; twauth.oauth_token_secret ) {
+      self.oauth.getOAuthAccessToken(
+        path.query.oauth_token,
+        twauth.oauth_token_secret,
+        path.query.oauth_verifier,
+      function(error, access_token_key, access_token_secret, params) {
+        // FIXME: if we didn&#x27;t get these, explode
+        var user_id = (params &#x26;&#x26; params.user_id) || null,
+          screen_name = (params &#x26;&#x26; params.screen_name) || null;
+
+        if ( error ) {
+          // FIXME: do something more intelligent
+          return next(500);
+        } else {
+          setState(res, self.options.cookie, JSON.stringify({
+            user_id: user_id,
+            screen_name: screen_name,
+            access_token_key: access_token_key,
+            access_token_secret: access_token_secret
+          }));
+          res.writeHead(302, {&#x27;Location&#x27;: success || &#x27;/&#x27;});
+          res.end();
+          return;
+        }
+      });
+
+    // Begin OAuth transaction if we have no cookie or access_token_secret
+    } else if ( !(twauth &#x26;&#x26; twauth.access_token_secret) ) {
+      self.oauth.getOAuthRequestToken(
+      function(error, oauth_token, oauth_token_secret, oauth_authorize_url, params) {
+        if ( error ) {
+          // FIXME: do something more intelligent
+          return next(500);
+        } else {
+          setState(res, self.options.cookie, JSON.stringify({
+            oauth_token: oauth_token,
+            oauth_token_secret: oauth_token_secret
+          }));
+          res.writeHead(302, {
+            &#x27;Location&#x27;: self.options.authorize_url + &#x27;?&#x27;
+              + querystring.stringify({oauth_token: oauth_token})
+          });
+          res.end();
+          return;
+        }
+      });
+
+    // Broken cookie, clear it and return to originating page
+    // FIXME: this is dumb
+    } else {
+      clearState(res, self.options.cookie);
+      res.writeHead(302, {&#x27;Location&#x27;: mount});
+      res.end();
+      return;
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.lookupFriendship" id="apidoc.element.ntwitter.index.prototype.lookupFriendship">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>lookupFriendship
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lookupFriendship = function (id, callback) {
+  var url = &#x27;/friendships/lookup.json&#x27;,
+      params = {}, ids = [], names = [];
+
+  if (typeof id === &#x27;string&#x27;) {
+    id = id.replace(/^\s+|\s+$/g, &#x27;&#x27;);
+    id = id.split(&#x27;,&#x27;);
+  }
+
+  id = [].concat(id);
+
+  id.forEach(function(item) {
+    if (parseInt(item, 10)) {
+      ids.push(item);
+    } else {
+      names.push(item);
+    }
+  });
+
+  params.user_id = ids.toString();
+  params.screen_name = names.toString();
+
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.lookupUser" id="apidoc.element.ntwitter.index.prototype.lookupUser">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>lookupUser
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lookupUser = function (id, callback) {
+  // Lookup will take a single id as well as multiple; why not just use it?
+  var url = &#x27;/users/lookup.json&#x27;,
+      params = {}, ids = [], names = [];
+
+  if(typeof id === &#x27;string&#x27;) {
+    id = id.replace(/^\s+|\s+$/g, &#x27;&#x27;);
+    id = id.split(&#x27;,&#x27;);
+  }
+
+  // Wrap any stand-alone item in an array.
+  id = [].concat(id);
+
+  // Add numbers as userIds, strings as usernames.
+  id.forEach(function(item) {
+    if (+item)
+      ids.push(item);
+    else
+      names.push(item);
+  });
+
+  params.user_id = ids.toString();
+  params.screen_name = names.toString();
+
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.lookupUsers" id="apidoc.element.ntwitter.index.prototype.lookupUsers">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>lookupUsers
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lookupUsers = function (id, callback) {
+  // Lookup will take a single id as well as multiple; why not just use it?
+  var url = &#x27;/users/lookup.json&#x27;,
+      params = {}, ids = [], names = [];
+
+  if(typeof id === &#x27;string&#x27;) {
+    id = id.replace(/^\s+|\s+$/g, &#x27;&#x27;);
+    id = id.split(&#x27;,&#x27;);
+  }
+
+  // Wrap any stand-alone item in an array.
+  id = [].concat(id);
+
+  // Add numbers as userIds, strings as usernames.
+  id.forEach(function(item) {
+    if (+item)
+      ids.push(item);
+    else
+      names.push(item);
+  });
+
+  params.user_id = ids.toString();
+  params.screen_name = names.toString();
+
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.newDirectMessage" id="apidoc.element.ntwitter.index.prototype.newDirectMessage">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>newDirectMessage
+        <span class="apidocSignatureSpan">(id, text, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">newDirectMessage = function (id, text, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var defaults = {
+    text: text,
+    include_entities: 1
+  };
+  if (typeof id === &#x27;string&#x27;)
+    defaults.screen_name = id;
+  else
+    defaults.user_id = id;
+  params = utils.merge(defaults, params);
+
+  var url = &#x27;/direct_messages/new.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.newSavedSearch" id="apidoc.element.ntwitter.index.prototype.newSavedSearch">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>newSavedSearch
+        <span class="apidocSignatureSpan">(query, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">newSavedSearch = function (query, callback) {
+  var url = &#x27;/saved_searches/create.json&#x27;;
+  this.post(url, {query: query}, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.outgoingFriendship" id="apidoc.element.ntwitter.index.prototype.outgoingFriendship">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>outgoingFriendship
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">outgoingFriendship = function (callback) {
+  var url = &#x27;/friendships/outgoing.json&#x27;;
+  this._getUsingCursor(url, {key:&#x27;ids&#x27;}, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.outgoingFriendships" id="apidoc.element.ntwitter.index.prototype.outgoingFriendships">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>outgoingFriendships
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">outgoingFriendships = function (callback) {
+  var url = &#x27;/friendships/outgoing.json&#x27;;
+  this._getUsingCursor(url, {key:&#x27;ids&#x27;}, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.post" id="apidoc.element.ntwitter.index.prototype.post">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>post
+        <span class="apidocSignatureSpan">(url, content, content_type, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">post = function (url, content, content_type, callback) {
+  if (typeof content === &#x27;function&#x27;) {
+    callback = content;
+    content = null;
+    content_type = null;
+  } else if (typeof content_type === &#x27;function&#x27;) {
+    callback = content_type;
+    content_type = null;
+  }
+
+  if ( typeof callback !== &#x27;function&#x27; ) {
+    throw new Error(&#x27;FAIL: INVALID CALLBACK.&#x27;);
+    return this;
+  }
+
+  if (url.charAt(0) == &#x27;/&#x27;)
+    url = this.options.rest_base + url;
+
+  // Workaround: oauth + booleans == broken signatures
+  if (content &#x26;&#x26; typeof content === &#x27;object&#x27;) {
+    Object.keys(content).forEach(function(e) {
+			if ( typeof content[e] === &#x27;boolean&#x27; )
+				content[e] = content[e].toString();
+		});
+  }
+
+  this.oauth.post(url,
+    this.options.access_token_key,
+    this.options.access_token_secret,
+    content, content_type,
+  function(error, data, response) {
+    if ( error &#x26;&#x26; error.statusCode ) {
+      var err = new Error(&#x27;HTTP Error &#x27;
+        + error.statusCode + &#x27;: &#x27;
+        + http.STATUS_CODES[error.statusCode]
+        + &#x27;, API message: &#x27; + error.data);
+      err.data = error.data;
+      err.statusCode = error.statusCode;
+      callback(err);
+    }
+    else if (error) {
+      callback(error);
+    }
+    else {
+      try {
+        var json = JSON.parse(data);
+      }
+      catch(err) {
+        return callback(err);
+      }
+      callback(null, json);
+    }
+  });
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.rateLimitStatus" id="apidoc.element.ntwitter.index.prototype.rateLimitStatus">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>rateLimitStatus
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rateLimitStatus = function (callback) {
+  var url = &#x27;/account/rate_limit_status.json&#x27;;
+  this.get(url, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.reportSpam" id="apidoc.element.ntwitter.index.prototype.reportSpam">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>reportSpam
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reportSpam = function (id, callback) {
+  var url = &#x27;/report_spam.json&#x27;;
+
+  var params = {};
+  if (typeof id === &#x27;string&#x27;)
+    params.screen_name = id;
+  else
+    params.user_id = id;
+
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.retweetStatus" id="apidoc.element.ntwitter.index.prototype.retweetStatus">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>retweetStatus
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">retweetStatus = function (id, callback) {
+  var url = &#x27;/statuses/retweet/&#x27; + escape(id) + &#x27;.json&#x27;;
+  this.post(url, null, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.savedSearches" id="apidoc.element.ntwitter.index.prototype.savedSearches">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>savedSearches
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">savedSearches = function (callback) {
+  var url = &#x27;/saved_searches.json&#x27;;
+  this.get(url, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.search" id="apidoc.element.ntwitter.index.prototype.search">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>search
+        <span class="apidocSignatureSpan">(q, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">search = function (q, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = {};
+  }
+
+  if ( typeof callback !== &#x27;function&#x27; ) {
+    throw new Error(&#x27;FAIL: INVALID CALLBACK.&#x27;);
+    return this;
+  }
+
+  var url = this.options.search_base + &#x27;/search.json&#x27;;
+  params = utils.merge(params, {q:q});
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+  );
+```
+
+### Search API
+
+``` javascript
+twit.<span class="apidocCodeKeywordSpan">search</span>(&#x27;nodejs OR #node&#x27;, {}, function(err, data) {
+  console.log(data);
+});
+```
+
+### Streaming API
+
+The stream() callback receives a Stream-like EventEmitter.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.searchUser" id="apidoc.element.ntwitter.index.prototype.searchUser">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>searchUser
+        <span class="apidocSignatureSpan">(q, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">searchUser = function (q, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var url = &#x27;/users/search.json&#x27;;
+  params = utils.merge(params, {q:q});
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.searchUsers" id="apidoc.element.ntwitter.index.prototype.searchUsers">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>searchUsers
+        <span class="apidocSignatureSpan">(q, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">searchUsers = function (q, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var url = &#x27;/users/search.json&#x27;;
+  params = utils.merge(params, {q:q});
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.sendDirectMessage" id="apidoc.element.ntwitter.index.prototype.sendDirectMessage">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>sendDirectMessage
+        <span class="apidocSignatureSpan">(id, text, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendDirectMessage = function (id, text, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var defaults = {
+    text: text,
+    include_entities: 1
+  };
+  if (typeof id === &#x27;string&#x27;)
+    defaults.screen_name = id;
+  else
+    defaults.user_id = id;
+  params = utils.merge(defaults, params);
+
+  var url = &#x27;/direct_messages/new.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.showFriendship" id="apidoc.element.ntwitter.index.prototype.showFriendship">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>showFriendship
+        <span class="apidocSignatureSpan">(source, target, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showFriendship = function (source, target, callback) {
+  var params = {};
+
+  if (typeof source === &#x27;string&#x27;)
+    params.source_screen_name = source;
+  else
+    params.source_id = source;
+
+  if (typeof target === &#x27;string&#x27;)
+    params.target_screen_name = target;
+  else
+    params.target_id = target;
+
+  var url = &#x27;/friendships/show.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.showList" id="apidoc.element.ntwitter.index.prototype.showList">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>showList
+        <span class="apidocSignatureSpan">(screen_name, list_id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showList = function (screen_name, list_id, callback) {
+  var url = &#x27;/&#x27; + escape(screen_name) + &#x27;/lists/&#x27; + escape(list_id) + &#x27;.json&#x27;;
+  this.get(url, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.showListStatuses" id="apidoc.element.ntwitter.index.prototype.showListStatuses">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>showListStatuses
+        <span class="apidocSignatureSpan">(screen_name, list_id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showListStatuses = function (screen_name, list_id, params, callback) {
+  var url = &#x27;/&#x27; + escape(screen_name) + &#x27;/lists/&#x27; + escape(list_id) + &#x27;/statuses.json&#x27;;
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.showSavedSearch" id="apidoc.element.ntwitter.index.prototype.showSavedSearch">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>showSavedSearch
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showSavedSearch = function (id, callback) {
+  var url = &#x27;/saved_searches/&#x27; + escape(id) + &#x27;.json&#x27;;
+  this.get(url, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.showStatus" id="apidoc.element.ntwitter.index.prototype.showStatus">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>showStatus
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showStatus = function (id, callback) {
+  var url = &#x27;/statuses/show/&#x27; + escape(id) + &#x27;.json&#x27;;
+  this.get(url, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.showUser" id="apidoc.element.ntwitter.index.prototype.showUser">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>showUser
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showUser = function (id, callback) {
+  // Lookup will take a single id as well as multiple; why not just use it?
+  var url = &#x27;/users/lookup.json&#x27;,
+      params = {}, ids = [], names = [];
+
+  if(typeof id === &#x27;string&#x27;) {
+    id = id.replace(/^\s+|\s+$/g, &#x27;&#x27;);
+    id = id.split(&#x27;,&#x27;);
+  }
+
+  // Wrap any stand-alone item in an array.
+  id = [].concat(id);
+
+  // Add numbers as userIds, strings as usernames.
+  id.forEach(function(item) {
+    if (+item)
+      ids.push(item);
+    else
+      names.push(item);
+  });
+
+  params.user_id = ids.toString();
+  params.screen_name = names.toString();
+
+  this.get(url, params, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.stream" id="apidoc.element.ntwitter.index.prototype.stream">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>stream
+        <span class="apidocSignatureSpan">(method, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stream = function (method, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  // Iterate on params properties, if any property is an array, convert it to comma-delimited string
+  if (params) {
+		Object.keys(params).forEach(function(item) {
+			if (util.isArray(params[item])) {
+				params[item] = params[item].join(&#x27;,&#x27;);
+			}
+		});
+  }
+
+  var stream_base = this.options.stream_base,
+      self = this;
+
+  // Stream type customisations
+  if (method === &#x27;user&#x27;) {
+    stream_base = this.options.user_stream_base;
+  }
+  else if (method === &#x27;site&#x27;) {
+    stream_base = this.options.site_stream_base;
+  }
+
+
+  var url = stream_base + &#x27;/&#x27; + escape(method) + &#x27;.json&#x27;;
+
+  var request = this.oauth.post(
+    url,
+    this.options.access_token_key,
+    this.options.access_token_secret,
+    params, null
+  );
+
+  var stream = new streamparser();
+
+  stream.destroySilent = function() {
+    if ( typeof request.abort === &#x27;function&#x27; )
+      request.abort(); // node v0.4.0
+    else
+      request.socket.destroy();
+  };
+  stream.destroy = function() {
+    // FIXME: should we emit end/close on explicit destroy?
+    stream.destroySilent();
+
+    // emit the &#x27;destroy&#x27; event
+    stream.emit(&#x27;destroy&#x27;,&#x27;socket has been destroyed&#x27;);
+  };
+
+
+  stream.on(&#x27;_data&#x27;, processTweet);
+
+  function processTweet(tweet) {
+    if (tweet[&#x27;limit&#x27;]) {
+      stream.emit(&#x27;limit&#x27;, tweet[&#x27;limit&#x27;]);
+    }
+    else if (tweet[&#x27;delete&#x27;]) {
+      stream.emit(&#x27;delete&#x27;, tweet[&#x27;delete&#x27;]);
+    }
+    else if (tweet[&#x27;scrub_geo&#x27;]) {
+      stream.emit(&#x27;scrub_geo&#x27;, tweet[&#x27;scrub_geo&#x27;]);
+    }
+    else {
+      stream.emit(&#x27;data&#x27;, tweet);
+    }
+  }
+
+  request.on(&#x27;response&#x27;, function(response) {
+
+    // Any response code greater then 200 from steam API is an error
+    if(response.statusCode &#x3e; 200) {
+      stream.destroySilent();
+      stream.emit(&#x27;error&#x27;, &#x27;http&#x27;, response.statusCode );
+    }
+    else
+    {
+      // FIXME: Somehow provide chunks of the response when the stream is connected
+      // Pass HTTP response data to the parser, which raises events on the stream
+      response.on(&#x27;data&#x27;, function(chunk) {
+        stream.receive(chunk);
+      });
+      response.on(&#x27;error&#x27;, function(error) {
+        stream.emit(&#x27;error&#x27;, error);
+      });
+      response.on(&#x27;end&#x27;, function() {
+        stream.emit(&#x27;end&#x27;, response);
+      });
+
+<span class="apidocCodeCommentSpan">      /*
+       * This is a net.Socket event.
+       * When twitter closes the connectionm no &#x27;end/error&#x27; event is fired.
+       * In this way we can able to catch this event and force to destroy the
+       * socket. So, &#x27;stream&#x27; object will fire the &#x27;destroy&#x27; event as we can see above.
+       */
+</span>      response.on(&#x27;close&#x27;, function() {
+        stream.destroy();
+      });
+    }
+  });
+  request.on(&#x27;error&#x27;, function(error) {
+    stream.emit(&#x27;error&#x27;, error);
+  });
+  request.end();
+
+  if ( typeof callback === &#x27;function&#x27; ) callback(stream);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Streaming API
+
+The stream() callback receives a Stream-like EventEmitter.
+
+Here is an example of how to call the `statuses/sample` method:
+
+``` javascript
+twit.<span class="apidocCodeKeywordSpan">stream</span>(&#x27;statuses/sample&#x27;, function(stream) {
+  stream.on(&#x27;data&#x27;, function (data) {
+    console.log(data);
+  });
+});
+```
+
+Here is an example of how to call the &#x27;statuses/filter&#x27; method with a bounding box over San Fransisco and New York City
+ ( see streaming api for more details on [locations](https://dev.twitter.com/docs/streaming-api/methods#locations) ):
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.unblockUser" id="apidoc.element.ntwitter.index.prototype.unblockUser">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>unblockUser
+        <span class="apidocSignatureSpan">(id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unblockUser = function (id, callback) {
+  var url = &#x27;/blocks/destroy.json&#x27;;
+
+  var params = {};
+  if (typeof id === &#x27;string&#x27;)
+    params.screen_name = id;
+  else
+    params.user_id = id;
+
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.updateDirectMessage" id="apidoc.element.ntwitter.index.prototype.updateDirectMessage">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>updateDirectMessage
+        <span class="apidocSignatureSpan">(id, text, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateDirectMessage = function (id, text, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var defaults = {
+    text: text,
+    include_entities: 1
+  };
+  if (typeof id === &#x27;string&#x27;)
+    defaults.screen_name = id;
+  else
+    defaults.user_id = id;
+  params = utils.merge(defaults, params);
+
+  var url = &#x27;/direct_messages/new.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.updateList" id="apidoc.element.ntwitter.index.prototype.updateList">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>updateList
+        <span class="apidocSignatureSpan">(screen_name, list_id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateList = function (screen_name, list_id, params, callback) {
+  var url = &#x27;/&#x27; + escape(screen_name) + &#x27;/lists/&#x27; + escape(list_id) + &#x27;.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.updateProfile" id="apidoc.element.ntwitter.index.prototype.updateProfile">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>updateProfile
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateProfile = function (params, callback) {
+  // params: name, url, location, description
+  var defaults = {
+    include_entities: 1
+  };
+  params = utils.merge(defaults, params);
+
+  var url = &#x27;/account/update_profile.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.updateProfileImg" id="apidoc.element.ntwitter.index.prototype.updateProfileImg">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>updateProfileImg
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateProfileImg = function (params, callback) {
+  // params: name, url, location, description
+  var defaults = {
+    include_entities: 1
+  };
+  params = utils.merge(defaults, params);
+
+  var url = &#x27;/account/update_profile_image.json&#x27;;
+  this.post(url, params, null, callback);
+  return this;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.updateStatus" id="apidoc.element.ntwitter.index.prototype.updateStatus">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>updateStatus
+        <span class="apidocSignatureSpan">(text, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateStatus = function (text, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  }
+
+  var url = &#x27;/statuses/update.json&#x27;;
+  var defaults = {
+    status: text,
+    include_entities: 1
+  };
+  params = utils.merge(defaults, params);
+  this.post(url, params, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Note that all functions may be chained:
+
+``` javascript
+twit
+  .verifyCredentials(function (err, data) {
+    console.log(data);
+  })
+  .<span class="apidocCodeKeywordSpan">updateStatus</span>(&#x27;Test tweet from ntwitter/&#x27; + twitter.VERSION,
+    function (err, data) {
+      console.log(data);
+    }
+  );
+```
+
+### Search API
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.userProfileImage" id="apidoc.element.ntwitter.index.prototype.userProfileImage">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>userProfileImage
+        <span class="apidocSignatureSpan">(id, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">userProfileImage = function (id, params, callback) {
+  if (typeof params === &#x27;function&#x27;) {
+    callback = params;
+    params = null;
+  } else if (typeof params === &#x27;string&#x27;) {
+    params = { size: params };
+  }
+
+  var url = &#x27;/users/profile_image/&#x27; + escape(id) + &#x27;.json?&#x27; + querystring.stringify(params);
+
+  // Do our own request, so we can return the 302 location header
+  var request = this.oauth.get(this.options.rest_base + url,
+    this.options.access_token_key,
+    this.options.access_token_secret);
+  request.on(&#x27;response&#x27;, function(response) {
+    // return the location or an HTTP error
+    if (!response.headers.location) {
+      callback(new Error(&#x27;HTTP Error &#x27;
+      + response.statusCode + &#x27;: &#x27;
+      + http.STATUS_CODES[response.statusCode])) }
+    callback(null, response.headers.location);
+  });
+  request.end();
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.index.prototype.verifyCredentials" id="apidoc.element.ntwitter.index.prototype.verifyCredentials">
+        function <span class="apidocSignatureSpan">ntwitter.index.prototype.</span>verifyCredentials
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifyCredentials = function (callback) {
+  var url = &#x27;/account/verify_credentials.json&#x27;;
+  this.get(url, null, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+If your Twitter interaction is very important, double-check the parameters in the code with
+Twitter&#x27;s current documentation.
+
+Note that all functions may be chained:
+
+``` javascript
+twit
+.<span class="apidocCodeKeywordSpan">verifyCredentials</span>(function (err, data) {
+  console.log(data);
+})
+.updateStatus(&#x27;Test tweet from ntwitter/&#x27; + twitter.VERSION,
+  function (err, data) {
+    console.log(data);
+  }
+);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ntwitter.parser" id="apidoc.module.ntwitter.parser">module ntwitter.parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.parser.parser" id="apidoc.element.ntwitter.parser.parser">
+        function <span class="apidocSignatureSpan">ntwitter.</span>parser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parser() {
+  // Make sure we call our parents constructor
+  EventEmitter.call(this);
+  this.buffer = &#x27;&#x27;;
+  this.lastTime = null;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ntwitter.parser.prototype" id="apidoc.module.ntwitter.parser.prototype">module ntwitter.parser.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.parser.prototype.checkHeartbeat" id="apidoc.element.ntwitter.parser.prototype.checkHeartbeat">
+        function <span class="apidocSignatureSpan">ntwitter.parser.prototype.</span>checkHeartbeat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkHeartbeat = function (){
+  var self = this;
+  var currentTime = new Date().getTime();
+
+  if (self.lastTime !== null &#x26;&#x26; self.lastTime &#x3c; (currentTime - 30000)){
+    self.emit(&#x22;missedHeartbeat&#x22;);
+  }
+
+  setTimeout(function(){ self.checkHeartbeat(); }, 30000  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var self = this;
+  var currentTime = new Date().getTime();
+
+  if (self.lastTime !== null &#x26;&#x26; self.lastTime &#x3c; (currentTime - 30000)){
+    self.emit(&#x22;missedHeartbeat&#x22;);
+  }
+
+  setTimeout(function(){ self.<span class="apidocCodeKeywordSpan">checkHeartbeat</span>(); }, 30000  );
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.parser.prototype.receive" id="apidoc.element.ntwitter.parser.prototype.receive">
+        function <span class="apidocSignatureSpan">ntwitter.parser.prototype.</span>receive
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function receive(buffer) {
+  this.lastTime = new Date().getTime();
+  this.buffer += buffer.toString(&#x27;utf8&#x27;);
+  var index, json;
+
+  // We have END?
+  while ((index = this.buffer.indexOf(Parser.END)) &#x3e; -1) {
+    json = this.buffer.slice(0, index);
+    this.buffer = this.buffer.slice(index + Parser.END_LENGTH);
+    if (json.length &#x3e; 0) {
+      try {
+        json = JSON.parse(json);
+      } catch (error) {
+        this.emit(&#x27;error&#x27;, new Error(&#x27;Invalid JSON - &#x27;, error.message));
+      }
+      this.emit(&#x27;_data&#x27;, json);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// assumptions:
+//   1) ninjas are mammals
+//   2) tweets come in chunks of text, surrounded by {}&#x27;s, separated by line breaks
+//   3) only one tweet per chunk
+//
+//   p = new parser.instance()
+//   p.addListener(&#x27;object&#x27;, function...)
+//   p.<span class="apidocCodeKeywordSpan">receive</span>(data)
+//   p.receive(data)
+//   ...
+
+var EventEmitter = require(&#x27;events&#x27;).EventEmitter;
+
+var Parser = module.exports = function Parser() {
+// Make sure we call our parents constructor
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ntwitter.utils" id="apidoc.module.ntwitter.utils">module ntwitter.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ntwitter.utils.merge" id="apidoc.element.ntwitter.utils.merge">
+        function <span class="apidocSignatureSpan">ntwitter.utils.</span>merge
+        <span class="apidocSignatureSpan">(defaults)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">merge = function (defaults) {
+	for(var i = 1; i &#x3c; arguments.length; i++){
+		for(var opt in arguments[i]){
+			defaults[opt] = arguments[i][opt];
+}
+	}
+	return defaults;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
